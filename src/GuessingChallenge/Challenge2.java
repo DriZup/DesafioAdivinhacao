@@ -12,6 +12,7 @@ public class Challenge2 {
         Random random = new Random();
 
         boolean playagain = true;
+        int totalpoints = 0;
 
         while (playagain) {
 
@@ -37,6 +38,8 @@ public class Challenge2 {
             points += 10;
             System.out.println("Congratulations! You guessed correctly. You earned 10 points.");
 
+            totalpoints += points;
+
             System.out.println("Do you want to play again: yes/no");
             String response = sc.next().toLowerCase(Locale.ROOT);
 
@@ -45,7 +48,7 @@ public class Challenge2 {
                 System.out.println("Goodbye!");
             }
             System.out.println("The random number was: " + randomNumber);
-            System.out.println("Your total points: " + points);
+            System.out.println("Your total points: " + totalpoints);
         }
 
         sc.close();
